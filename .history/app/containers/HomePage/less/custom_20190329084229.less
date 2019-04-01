@@ -1,0 +1,46 @@
+@import "~antd/lib/style/themes/default.less";
+
+@primary-color: #470C0D; // primary color for all components
+@link-color: #470C0D; // link color
+@success-color: #52c41a; // success state color
+@warning-color: #faad14; // warning state color
+@error-color: #f5222d; // error state color
+@font-size-base: 14px; // major text font size
+@heading-color: rgba(0, 0, 0, .85); // heading text color
+@text-color: rgba(0, 0, 0, .65); // major text color
+@text-color-secondary : rgba(0, 0, 0, .45); // secondary text color
+@disabled-color : rgba(0, 0, 0, .25); // disable state color
+@border-radius-base: 4px; // major border radius
+@border-color-base: #d9d9d9; // major border color
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15); // major shadow for layers
+@shadow-color: rgba(0, 0, 0, 0.15);
+@line-color: #e9e9e9;
+@bottom-bar-bg-color: #262626;
+@bottom-bar-line-color: #000;
+
+@template-bg-color: #ffffff;
+@template-bg-color-light: #ececec;
+@template-nav-bg-color: fade(@template-bg-color, 95%);
+@template-text-color: #ccc;
+@template-text-title-color: #bcbcbc;
+@template-text-color-light: rgb(255, 110, 110);
+@template-footer-text-color: #999;
+
+@animate-duration: .45s;
+
+/* 详细页图片或框框的样式;
+*/
+.page-shadow() {
+  box-shadow: 0 5px 8px @shadow-color;
+}
+
+.page-pro() {
+  border-radius: 6px;
+  border: 1px solid @line-color;
+  transform: translateY(0);
+  transition: transform .3s @ease-out, box-shadow .3s @ease-out;
+  &:hover {
+    .page-shadow();
+    transform: translateY(-5px);
+  }
+}
